@@ -1,0 +1,39 @@
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+  }
+
+
+.body {
+    max-width: 1128px;
+    margin: 0 auto;
+    padding: 24px 156px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+.gallery-item {
+    max-width: 360px;
+    max-height: 200px;
+  }
+  
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-out;
+  }
+  
+.gallery-image:hover {
+    cursor: ponter;
+    transform: scale(1.04, 1.04);
+}
