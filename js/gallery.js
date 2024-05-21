@@ -85,16 +85,15 @@ function handleGalleryClick(event) {
     }
 
     const largeImageSrc = event.target.dataset.source;
+    const altText = event.target.alt;
 
-    const lightbox = basicLightbox.create(`<img src="${largeImageSrc}" alt="">`);
-    lightbox.show();
+    const lightbox = basicLightbox.create(`<img src="${largeImageSrc}" alt="${altText}">`);
+        lightbox.show();
 }
 
 
-images.forEach(image => {
-    const galleryItem = createGalleryItem(image);
-    gallery.innerHTML += galleryItem;
-});
+const markup = images.map(createGalleryItem).join();
+    gallery.innerHTML = markup;
 
 
 gallery.addEventListener('click', handleGalleryClick);
