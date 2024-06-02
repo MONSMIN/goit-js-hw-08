@@ -92,7 +92,7 @@ function handleGalleryClick(event) {
 }
 
 
-const markup = images.map(createGalleryItem).join();
+const markup = images.map(createGalleryItem).join('');
     gallery.innerHTML = markup;
 
 
